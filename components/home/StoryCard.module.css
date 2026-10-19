@@ -1,0 +1,52 @@
+.story {
+  position: relative;
+  display: block;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sticker);
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: transform 120ms ease;
+}
+
+.story:hover {
+  transform: translate(-2px, -2px) rotate(-1deg);
+}
+
+.badge {
+  position: absolute;
+  top: var(--space-8);
+  left: var(--space-8);
+  display: inline-flex;
+  padding: var(--space-4);
+  border: var(--border-ink);
+  border-radius: var(--radius-pill);
+  background: var(--color-crema);
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--space-32) * 2);
+  height: calc(var(--space-32) * 2);
+  border: var(--border-ink);
+  border-radius: var(--radius-pill);
+  background: var(--color-neon-pink);
+  box-shadow: var(--shadow-sticker);
+  font-size: var(--text-title-size);
+  transform: translate(-50%, -50%);
+}
+
+.caption {
+  position: absolute;
+  left: var(--space-8);
+  right: var(--space-8);
+  bottom: var(--space-8);
+  padding: var(--space-8);
+  border-radius: var(--radius-block);
+  background: var(--color-ink);
+  color: var(--color-crema);
+}

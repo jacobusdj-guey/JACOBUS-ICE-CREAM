@@ -1,0 +1,22 @@
+.band {
+  padding-block: var(--space-32);
+  background: var(--color-pastel-vainilla);
+  border-block: var(--border-ink);
+  overflow: hidden;
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-32);
+}
+
+.text {
+  max-width: 18ch;
+}
+
+.sticker {
+  flex-shrink: 0;
+}

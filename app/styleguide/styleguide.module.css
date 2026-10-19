@@ -1,0 +1,214 @@
+.page {
+  padding-bottom: var(--space-32);
+}
+
+.intro {
+  padding-block: var(--space-32);
+  background: var(--color-pastel-vainilla);
+  border-bottom: var(--border-ink);
+}
+
+.introTitle {
+  display: inline-block;
+  margin-block: var(--space-8) var(--space-16);
+  padding: var(--space-8) var(--space-16);
+  background: var(--color-neon-pink);
+  border-radius: var(--radius-block);
+  box-shadow: var(--shadow-sticker);
+  transform: rotate(-2deg);
+  /* Una sola palabra larga: en móvil se encoge para no forzar scroll horizontal */
+  font-size: min(var(--text-display-xl-size), 9vw);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding-block: var(--space-32);
+}
+
+.section > :global(.container) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.bandFresa {
+  background: var(--color-pastel-fresa);
+  border-block: var(--border-ink);
+}
+
+.bandLavanda {
+  background: var(--color-pastel-lavanda);
+  border-block: var(--border-ink);
+}
+
+.bandVainilla {
+  background: var(--color-pastel-vainilla);
+  border-block: var(--border-ink);
+}
+
+/* Título con subrayado lima: el lima va como fondo, el texto en ink */
+.h2 {
+  align-self: flex-start;
+  text-decoration: underline;
+  text-decoration-color: var(--color-neon-lime);
+  text-decoration-thickness: 0.32em;
+  text-underline-offset: -0.12em;
+  text-decoration-skip-ink: none;
+}
+
+/* ---------- Colores ---------- */
+.swatches {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: var(--space-16);
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--border-ink);
+  border-radius: var(--radius-card);
+  background: var(--color-crema);
+  box-shadow: var(--shadow-sticker);
+}
+
+.chip {
+  height: calc(var(--space-32) * 3);
+  border-bottom: var(--border-ink);
+}
+
+.swatchText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-16);
+}
+
+.rule {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-16);
+  border: var(--border-ink);
+  border-left: var(--space-16) solid var(--color-neon-pink);
+  border-radius: var(--radius-block);
+  background: var(--color-crema);
+}
+
+/* ---------- Tipografía ---------- */
+.typeList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.typeRow {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding-bottom: var(--space-16);
+  border-bottom: var(--border-ink);
+  overflow-wrap: anywhere;
+}
+
+.dripSample {
+  display: inline-block;
+  padding: var(--space-4) var(--space-16);
+  background: var(--color-neon-pink);
+  border-radius: var(--radius-block);
+  transform: rotate(-3deg);
+}
+
+/* ---------- Demos ---------- */
+.demoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: var(--space-16);
+}
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding: var(--space-16);
+  border: var(--border-ink);
+  border-radius: var(--radius-block);
+}
+
+.demoCrema {
+  background: var(--color-crema);
+}
+
+.demoPistacho {
+  background: var(--color-pastel-pistacho);
+}
+
+.demoInk {
+  background: var(--color-ink);
+  color: var(--color-crema);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.stickers {
+  padding-block: var(--space-16);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: var(--space-32);
+  padding-top: var(--space-8);
+}
+
+/* ---------- Medidas ---------- */
+.spaces,
+.radii {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.spaceRow,
+.radiusItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.spaceBar {
+  flex-shrink: 0;
+  background: var(--color-neon-pink);
+  border: 1px solid var(--color-ink);
+}
+
+.radiusBox {
+  flex-shrink: 0;
+  width: calc(var(--space-32) * 2);
+  height: var(--space-32);
+  background: var(--color-neon-lime);
+  border: var(--border-ink);
+}
+
+.shadowBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(var(--space-32) * 3);
+  margin-block: var(--space-8);
+  border: var(--border-ink);
+  border-radius: var(--radius-card);
+  background: var(--color-crema);
+  box-shadow: var(--shadow-sticker);
+}

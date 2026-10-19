@@ -1,0 +1,61 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  min-height: 44px;
+  padding: var(--space-8) var(--space-16);
+  border: var(--border-ink);
+  border-radius: var(--radius-pill);
+  background: var(--color-crema);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.chip:hover {
+  background: var(--color-pastel-lavanda);
+}
+
+/* Activo: ink con detalle lima */
+.chip[aria-pressed="true"] {
+  background: var(--color-ink);
+  color: var(--color-crema);
+  box-shadow: var(--shadow-sticker-on-dark);
+}
+
+.count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  padding-inline: var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--color-pastel-vainilla);
+  color: var(--color-ink);
+}
+
+.chip[aria-pressed="true"] .count {
+  background: var(--color-neon-lime);
+}
+
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: var(--space-32);
+}
+
+.item {
+  scroll-margin-top: calc(var(--chrome-height) + var(--space-16));
+}

@@ -1,0 +1,36 @@
+.legal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  max-width: 760px;
+  padding-block: var(--space-32);
+}
+
+.legal h2 {
+  margin-top: var(--space-16);
+  font-size: var(--text-title-size);
+  line-height: var(--text-title-lh);
+}
+
+.legal ul {
+  padding-left: var(--space-32);
+}
+
+/* Botón "Configurar cookies" con aspecto de enlace */
+.legal button {
+  padding: 0;
+  border: 0;
+  background: none;
+  font-weight: var(--weight-bold);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Aviso · neón naranja con texto ink */
+.todo {
+  padding: var(--space-8) var(--space-16);
+  border: var(--border-ink);
+  border-radius: var(--radius-block);
+  background: var(--color-neon-orange);
+  color: var(--color-ink);
+}

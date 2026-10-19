@@ -1,0 +1,36 @@
+/* Aviso · neón: naranja (borde de aviso) · pastel: vainilla */
+.banner {
+  position: fixed;
+  left: var(--space-8);
+  right: var(--space-8);
+  bottom: var(--space-8);
+  z-index: var(--z-banner);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  max-width: 560px;
+  padding: var(--space-16);
+  border: var(--border-ink);
+  border-left: var(--space-16) solid var(--color-neon-orange);
+  border-radius: var(--radius-block);
+  background: var(--color-pastel-vainilla);
+  box-shadow: var(--shadow-sticker);
+  color: var(--color-ink);
+}
+
+.banner a {
+  font-weight: var(--weight-bold);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+}
+
+@media (min-width: 600px) {
+  .banner {
+    left: var(--space-16);
+    bottom: var(--space-16);
+  }
+}

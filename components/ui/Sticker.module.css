@@ -1,0 +1,33 @@
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-8);
+  border: var(--border-ink);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sticker);
+  color: var(--color-ink);
+  transform: rotate(-12deg);
+  aspect-ratio: 1;
+}
+
+.m {
+  width: calc(var(--space-32) * 3);
+}
+
+.s {
+  width: calc(var(--space-32) * 2 + var(--space-16));
+}
+
+.pink {
+  background: var(--color-neon-pink);
+}
+
+.lime {
+  background: var(--color-neon-lime);
+}
+
+.orange {
+  background: var(--color-neon-orange);
+}

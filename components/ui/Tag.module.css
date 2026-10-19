@@ -1,0 +1,25 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-4) var(--space-8);
+  border: var(--border-ink);
+  border-radius: var(--radius-block);
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.lime {
+  background: var(--color-neon-lime);
+}
+
+.orange {
+  background: var(--color-neon-orange);
+}
+
+.lavanda {
+  background: var(--color-pastel-lavanda);
+}
+
+.outline {
+  background: var(--color-crema);
+}

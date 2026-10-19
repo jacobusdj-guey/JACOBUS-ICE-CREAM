@@ -1,0 +1,80 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: min(calc(100svh - var(--chrome-height)), 720px);
+  overflow: hidden;
+  border-bottom: var(--border-ink);
+}
+
+/* La foto ocupa todo el fondo (a sangre) */
+.photo {
+  position: absolute;
+  inset: 0;
+}
+
+.photoFill {
+  height: 100%;
+}
+
+/* El texto de "Foto · TODO" se sube para no quedar tapado por el bloque rosa */
+.photoFill > div {
+  justify-content: flex-start;
+  padding-top: calc(var(--space-32) * 3);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-32);
+  padding-block: calc(var(--space-32) * 5) var(--space-32);
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  max-width: 100%;
+  padding: var(--space-16);
+  border: var(--border-ink);
+  border-radius: var(--radius-block);
+  background: var(--color-neon-pink);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-sticker);
+  transform: rotate(-3deg);
+  transform-origin: left bottom;
+}
+
+.drip {
+  align-self: flex-start;
+  transform: rotate(-4deg);
+}
+
+.subtitle {
+  margin-top: var(--space-8);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+}
+
+.sticker {
+  position: absolute;
+  top: var(--space-32);
+  right: var(--gutter);
+}
+
+@media (min-width: 900px) {
+  .block {
+    padding: var(--space-32);
+  }
+
+  .sticker {
+    top: calc(var(--space-32) * 2);
+    right: max(var(--gutter), calc((100% - var(--container-max)) / 2 + var(--gutter)));
+  }
+}

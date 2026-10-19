@@ -1,0 +1,132 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding-block: var(--space-32);
+}
+
+.crema {
+  background: var(--color-crema);
+}
+
+.fresa,
+.pistacho,
+.lavanda,
+.vainilla {
+  border-block: var(--border-ink);
+}
+
+.fresa {
+  background: var(--color-pastel-fresa);
+}
+
+.pistacho {
+  background: var(--color-pastel-pistacho);
+}
+
+.lavanda {
+  background: var(--color-pastel-lavanda);
+}
+
+.vainilla {
+  background: var(--color-pastel-vainilla);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-16);
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: 44px;
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.arrows {
+  display: none;
+  gap: var(--space-8);
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: var(--border-ink);
+  border-radius: var(--radius-pill);
+  background: var(--color-crema);
+  box-shadow: var(--shadow-sticker);
+  font-size: var(--text-title-size);
+  cursor: pointer;
+}
+
+.arrow:active {
+  transform: translate(4px, 4px);
+  box-shadow: var(--shadow-sticker-pressed);
+}
+
+/* Pista horizontal: el scroll es interno, la página nunca se desborda */
+.track {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--space-16);
+  padding: var(--space-16) var(--gutter) var(--space-16);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink) transparent;
+}
+
+.track:focus-visible {
+  outline-offset: -3px;
+}
+
+.card {
+  grid-auto-columns: min(80%, 300px);
+}
+
+.story {
+  grid-auto-columns: min(62%, 220px);
+}
+
+.item {
+  scroll-snap-align: start;
+  min-width: 0;
+}
+
+@media (min-width: 900px) {
+  .arrows {
+    display: flex;
+  }
+
+  /* En escritorio, alinear el primer elemento con el contenedor */
+  .track {
+    padding-inline: max(var(--gutter), calc((100% - var(--container-max)) / 2 + var(--gutter)));
+    scroll-padding-inline: max(var(--gutter), calc((100% - var(--container-max)) / 2 + var(--gutter)));
+  }
+}

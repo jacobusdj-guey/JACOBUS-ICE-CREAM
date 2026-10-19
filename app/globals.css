@@ -1,0 +1,281 @@
+/* =========================================================
+   JACOBUS ICE CREAM · Tokens de diseño
+   Única fuente de colores, tipos, espaciados, radios y sombras.
+   Ningún componente usa valores sueltos: todo sale de aquí.
+   ========================================================= */
+
+:root {
+  /* ---------- Color ---------- */
+  --color-crema: #fff6ec;          /* fondo de página por defecto */
+  --color-ink: #16121a;            /* texto principal; única tinta sobre neones y pasteles */
+  --color-ink-soft: #5a5160;       /* texto secundario */
+
+  --color-neon-pink: #ff2e93;      /* neón principal: bloques, stickers, botón primario */
+  --color-neon-lime: #c6ff1a;      /* subrayados, "NUEVO", detalles sobre ink */
+  --color-neon-orange: #ff6b1a;    /* ofertas y avisos, uso puntual */
+
+  --color-pastel-fresa: #ffc8dd;
+  --color-pastel-pistacho: #cdefc4;
+  --color-pastel-lavanda: #d9ccff;
+  --color-pastel-vainilla: #fff0b3;
+
+  /* Alias semánticos */
+  --color-bg: var(--color-crema);
+  --color-text: var(--color-ink);
+  --color-text-soft: var(--color-ink-soft);
+  --color-surface-dark: var(--color-ink);
+  --color-on-dark: var(--color-crema);
+  --color-action: var(--color-neon-pink);
+  --focus-ring-light: var(--color-ink);       /* foco sobre crema, pasteles y neones */
+  --focus-ring-dark: var(--color-neon-lime);  /* foco sobre ink */
+
+  /* ---------- Tipografía ---------- */
+  /* Las variables --font-*-family las inyecta next/font en <html> */
+  --font-display: var(--font-dela-gothic), "Arial Black", sans-serif;
+  --font-drip: var(--font-rubik-wet-paint), "Dela Gothic One", cursive;
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+
+  --text-display-xl-size: 72px;
+  --text-display-xl-lh: 0.92;
+  --text-display-l-size: 40px;
+  --text-display-l-lh: 1;
+  --text-drip-size: 48px;
+  --text-drip-lh: 1;
+  --text-title-size: 22px;
+  --text-title-lh: 28px;
+  --text-body-size: 16px;
+  --text-body-lh: 24px;
+  --text-label-size: 12px;
+  --text-label-lh: 16px;
+  --text-label-tracking: 0.08em;
+  --text-logo-size: 22px; /* logo tipográfico del header/footer */
+
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  /* ---------- Espaciado ---------- */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-32: 32px;
+
+  /* ---------- Radios ---------- */
+  --radius-block: 4px;   /* bloques y carteles casi rectos */
+  --radius-card: 16px;   /* tarjetas de sabor y fotos */
+  --radius-pill: 999px;  /* bolas, botones, stickers */
+
+  /* ---------- Sombra ---------- */
+  --shadow-sticker: 4px 4px 0 var(--color-ink); /* sombra dura; prohibidas las difusas */
+  --shadow-sticker-hover: 6px 6px 0 var(--color-ink);
+  --shadow-sticker-pressed: 0 0 0 var(--color-ink);
+  /* Misma sombra dura, en lima, para piezas sobre fondo ink (la ink no se vería) */
+  --shadow-sticker-on-dark: 4px 4px 0 var(--color-neon-lime);
+  --shadow-sticker-on-dark-hover: 6px 6px 0 var(--color-neon-lime);
+
+  /* ---------- Bordes ---------- */
+  --border-width: 2px;
+  --border-ink: var(--border-width) solid var(--color-ink);
+
+  /* ---------- Layout ---------- */
+  --container-max: 1200px;
+  --gutter: var(--space-16);
+  --header-height: 64px;
+  --ticker-height: 48px;
+  --chrome-height: calc(var(--header-height) + var(--ticker-height));
+
+  --z-ticker: 40;
+  --z-header: 50;
+  --z-menu: 45;
+  --z-banner: 60;
+}
+
+/* En móvil el display-xl baja de tamaño para no romper la pantalla de 375px */
+@media (max-width: 599px) {
+  :root {
+    --text-display-xl-size: 48px;
+    --text-display-l-size: 32px;
+    --text-drip-size: 40px;
+  }
+}
+
+@media (min-width: 900px) {
+  :root {
+    --gutter: var(--space-32);
+  }
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: var(--chrome-height);
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-lh);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  padding-top: var(--chrome-height); /* header + ticker fijos */
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+img,
+svg,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+/* ---------- Foco visible ---------- */
+:focus-visible {
+  outline: 3px solid var(--focus-ring-light);
+  outline-offset: 3px;
+}
+
+.on-dark :focus-visible,
+.on-dark:focus-visible {
+  outline-color: var(--focus-ring-dark);
+}
+
+/* ---------- Utilidades tipográficas ---------- */
+.display-xl {
+  font-family: var(--font-display);
+  font-weight: var(--weight-regular);
+  /* 12vw solo actúa en pantallas muy estrechas para que "PERMISO" quepa en 375px */
+  font-size: min(var(--text-display-xl-size), 12vw);
+  line-height: var(--text-display-xl-lh);
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.display-l {
+  font-family: var(--font-display);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-display-l-size);
+  line-height: var(--text-display-l-lh);
+  text-transform: uppercase;
+}
+
+.drip {
+  font-family: var(--font-drip);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-drip-size);
+  line-height: var(--text-drip-lh);
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-title-size);
+  line-height: var(--text-title-lh);
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body-size);
+  line-height: var(--text-body-lh);
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-label-size);
+  line-height: var(--text-label-lh);
+  letter-spacing: var(--text-label-tracking);
+  text-transform: uppercase;
+}
+
+/* Subrayado lima grueso bajo títulos de sección (lima como fondo, texto ink) */
+.underline-lime {
+  text-decoration: underline;
+  text-decoration-color: var(--color-neon-lime);
+  text-decoration-thickness: 0.32em;
+  text-underline-offset: -0.12em;
+  text-decoration-skip-ink: none;
+}
+
+.text-soft {
+  color: var(--color-text-soft);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-8);
+  top: calc(-1 * var(--header-height));
+  z-index: 100;
+  padding: var(--space-8) var(--space-16);
+  background: var(--color-neon-lime);
+  color: var(--color-ink);
+  border-radius: var(--radius-block);
+}
+
+.skip-link:focus {
+  top: var(--space-8);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
