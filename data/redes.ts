@@ -14,7 +14,7 @@ export interface PostRedes {
 export const posts: PostRedes[] = [
   { id: "obrador", red: "instagram", titulo: "Así se hace el turrón", url: "https://www.instagram.com/", pastel: "vainilla" },
   { id: "nuevo-fresa", red: "tiktok", titulo: "Fresa punk, primera bola", url: "https://www.tiktok.com/", pastel: "fresa" },
-  { id: "verano", red: "instagram", titulo: "Cola un sábado a las 23:00", url: "https://www.instagram.com/", pastel: "lavanda" },
+  { id: "verano", red: "instagram", titulo: "Cola un sábado a las 23:00", url: "https://www.instagram.com/", pastel: "lavanda", portada: "/redes/verano.jpg" },
   { id: "pistacho", red: "tiktok", titulo: "ASMR de pistacho", url: "https://www.tiktok.com/", pastel: "pistacho" },
   { id: "equipo", red: "instagram", titulo: "El equipo, sin filtros", url: "https://www.instagram.com/", pastel: "fresa" },
 ];

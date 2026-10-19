@@ -67,6 +67,7 @@ export const sabores: Sabor[] = [
     hoy: true,
     semana: true,
     sticker: "Top ventas",
+    foto: "/sabores/turron-de-jijona.jpg",
   },
   {
     id: "pistacho-salvaje",
@@ -79,6 +80,7 @@ export const sabores: Sabor[] = [
     etiquetas: ["sin-gluten"],
     hoy: true,
     semana: true,
+    foto: "/sabores/pistacho-salvaje.jpg",
   },
   {
     id: "fresa-punk",
@@ -92,6 +94,7 @@ export const sabores: Sabor[] = [
     hoy: true,
     semana: true,
     sticker: "¡Nuevo!",
+    foto: "/sabores/fresa-punk.jpg",
   },
   {
     id: "lavanda-y-miel",
@@ -116,6 +119,7 @@ export const sabores: Sabor[] = [
     etiquetas: ["vegano", "sin-gluten"],
     hoy: true,
     semana: false,
+    foto: "/sabores/chocolate-negro-70.jpg",
   },
   {
     id: "limon-de-elda",

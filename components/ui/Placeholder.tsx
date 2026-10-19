@@ -10,6 +10,10 @@ interface PhotoProps {
   rounded?: "card" | "block" | "none";
   priority?: boolean;
   className?: string;
+  /** Ancho que ocupa la foto en pantalla (para servir el tamaño justo) */
+  sizes?: string;
+  /** Punto de encuadre; por defecto algo por encima del centro, donde suele estar la bola */
+  focus?: string;
 }
 
 /**
@@ -24,6 +28,8 @@ export function Photo({
   rounded = "card",
   priority,
   className,
+  sizes = "(max-width: 600px) 100vw, 320px",
+  focus = "50% 30%",
 }: PhotoProps) {
   const cls = [styles.frame, styles[tone], styles[`r-${rounded}`], className]
     .filter(Boolean)
@@ -36,9 +42,10 @@ export function Photo({
           src={src}
           alt={alt}
           fill
-          sizes="(max-width: 600px) 100vw, 50vw"
+          sizes={sizes}
           priority={priority}
           className={styles.img}
+          style={{ objectPosition: focus }}
         />
       ) : (
         <div className={styles.placeholder} role="img" aria-label={alt}>

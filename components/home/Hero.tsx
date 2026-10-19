@@ -8,13 +8,15 @@ import styles from "./Hero.module.css";
 export function Hero() {
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
-      {/* TODO: foto real a sangre (mostrador, bola gigante, cola de gente…) */}
       <div className={styles.photo}>
         <Photo
-          alt="Foto a sangre: helado artesano goteando sobre un cucurucho"
+          src="/fotos/hero-conos.jpg"
+          alt="Dos cucuruchos de barquillo en alto: uno con bolas de pistacho y frutos rojos, otro con sorbete rojo"
           tone="lavanda"
           rounded="none"
           className={styles.photoFill}
+          sizes="100vw"
+          focus="60% 30%"
           priority
         />
       </div>
