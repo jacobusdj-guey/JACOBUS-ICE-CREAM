@@ -25,6 +25,7 @@ export function FlavorCard({ sabor, headingLevel: Heading = "h3" }: FlavorCardPr
         alt={`Bola de helado de ${sabor.nombre.toLowerCase()}`}
         ratio="4/3"
         tone={sabor.pastel}
+        focus={sabor.encuadre}
       />
 
       <div className={styles.body}>

@@ -35,6 +35,8 @@ export interface Sabor {
   sticker?: string;
   /** TODO: ruta a la foto real en /public/sabores/… */
   foto?: string;
+  /** Encuadre de la foto (CSS object-position), si la bola no queda centrada. Ej.: "20% 10%" */
+  encuadre?: string;
 }
 
 export const categoriaLabels: Record<Categoria, string> = {
@@ -80,7 +82,8 @@ export const sabores: Sabor[] = [
     etiquetas: ["sin-gluten"],
     hoy: true,
     semana: true,
-    foto: "/sabores/pistacho-salvaje.jpg",
+    foto: "/sabores/pistacho-cuencos.jpg",
+    encuadre: "30% 12%",
   },
   {
     id: "fresa-punk",
@@ -107,6 +110,7 @@ export const sabores: Sabor[] = [
     etiquetas: ["sin-gluten", "ultimas-bolas"],
     hoy: true,
     semana: true,
+    foto: "/sabores/lavanda-y-miel.jpg",
   },
   {
     id: "chocolate-negro-70",
@@ -151,7 +155,7 @@ export const sabores: Sabor[] = [
   {
     id: "galleta-rota",
     nombre: "Galleta rota",
-    descripcion: "Crema de vainilla con trozos de galleta casera. Ruido crujiente.",
+    descripcion: "Menta fresca con trozos de galleta casera y chocolate. Ruido crujiente.",
     categorias: ["cremas"],
     pastel: "fresa",
     precio: 3.5,
@@ -159,6 +163,7 @@ export const sabores: Sabor[] = [
     etiquetas: ["nuevo"],
     hoy: false,
     semana: true,
+    foto: "/sabores/galleta-rota.jpg",
   },
   {
     id: "yogur-sin-azucar",

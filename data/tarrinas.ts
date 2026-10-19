@@ -51,5 +51,6 @@ export const tarrinas: Tarrina[] = [
     formato: "6 × 120 ml",
     precio: 18,
     pastel: "vainilla",
+    foto: "/tarrinas/pack-degustacion.jpg",
   },
 ];
