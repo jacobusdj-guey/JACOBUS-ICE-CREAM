@@ -132,6 +132,7 @@ export const sabores: Sabor[] = [
     etiquetas: ["vegano", "sin-gluten"],
     hoy: true,
     semana: false,
+    foto: "/sabores/limon-de-elda.jpg",
   },
   {
     id: "galleta-rota",
@@ -156,6 +157,7 @@ export const sabores: Sabor[] = [
     etiquetas: ["sin-gluten"],
     hoy: false,
     semana: false,
+    foto: "/sabores/yogur-sin-azucar.jpg",
   },
   {
     id: "mango-chile",
