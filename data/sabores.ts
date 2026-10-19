@@ -136,6 +136,8 @@ export const sabores: Sabor[] = [
     etiquetas: ["vegano", "sin-gluten"],
     hoy: true,
     semana: false,
+    foto: "/sabores/limon-relleno.jpg",
+    encuadre: "60% 15%",
   },
   {
     id: "membrillo",
