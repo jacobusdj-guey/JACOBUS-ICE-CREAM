@@ -132,7 +132,21 @@ export const sabores: Sabor[] = [
     etiquetas: ["vegano", "sin-gluten"],
     hoy: true,
     semana: false,
-    foto: "/sabores/limon-de-elda.jpg",
+  },
+  {
+    id: "membrillo",
+    nombre: "Membrillo",
+    // TODO: confirmar receta, alérgenos y precio
+    descripcion: "El dulce de la abuela convertido en helado. Nadie lo pide la primera vez; todos repiten.",
+    categorias: ["cremas"],
+    pastel: "vainilla",
+    precio: 3.8,
+    alergenos: ["leche"],
+    etiquetas: ["nuevo", "sin-gluten"],
+    hoy: true,
+    semana: true,
+    sticker: "Rareza",
+    foto: "/sabores/membrillo.jpg",
   },
   {
     id: "galleta-rota",
